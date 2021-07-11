@@ -5,7 +5,6 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
   --color-border: #ccc;
-
   --border-radius: 30px;
 }
 
@@ -18,6 +17,7 @@
 /*  Typography  */
 
 html {
+  /* 62.5% of 16px = 10px */
   font-size: 62.5%;
 }
 
@@ -69,8 +69,7 @@ p {
   }
 }
 
-/*  Links */
-
+/* Links */
 a {
   text-decoration: none;
 }
@@ -97,8 +96,7 @@ a {
     font-size: 1.5rem;
   }
 }
-
-/*  Badges  */
+/* Badges */
 
 .badge {
   border-radius: 20px;
@@ -120,6 +118,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -131,8 +130,7 @@ a {
     font-size: 1.2rem;
   }
 }
-
-/*  Lists  */
+/* Lists */
 .list {
   list-style: none;
   padding-left: 0;
@@ -159,9 +157,7 @@ a {
     padding-left: 0;
   }
 }
-
-/*  Icons */
-
+/* Icons */
 .icon {
   width: 40px;
   height: 40px;
@@ -173,16 +169,14 @@ a {
 
 .icon-container {
   background: #f3f9fa;
+  width: 64px;
+  height: 64px;
   border-radius: 100%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 64px;
-  width: 64px;
 }
-
-/*  Buttons  */
-
+/* Buttons */
 .btn {
   border-radius: 40px;
   border: 0;
@@ -202,7 +196,7 @@ a {
 }
 
 .btn--primary:hover {
-  background: #3a8ffe;
+  background: #3a8ffd;
 }
 
 .btn--secondary {
@@ -211,7 +205,7 @@ a {
 }
 
 .btn--secondary:hover {
-  background: #00c8eb;
+  background: #05cdf0;
 }
 
 .btn--accent {
@@ -221,11 +215,6 @@ a {
 
 .btn--accent:hover {
   background: #ec3000;
-}
-
-.btn--block {
-  width: 100%;
-  display: inline-block;
 }
 
 .btn--outline {
@@ -239,6 +228,11 @@ a {
   color: #fff;
 }
 
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
@@ -246,7 +240,6 @@ a {
 }
 
 /* Inputs */
-
 .input {
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
@@ -281,7 +274,6 @@ a {
     font-size: 1.5rem;
   }
 }
-
 /* Cards */
 .card {
   border-radius: 7px;
@@ -302,4 +294,69 @@ a {
 .card--secondary .card__header {
   background: var(--color-secondary);
   color: #fff;
+}
+
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+
+/* Plans */
+.plan__name {
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(../images/popular.svg);
+  width: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+
+  .plan__price {
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
+  }
 }
